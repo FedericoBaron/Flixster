@@ -22,7 +22,8 @@ import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
     // PRODUCTION
-    public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=4d369090c5ea76c8dacd3d7d9c78a468";
+    //String movies_key = getString(R.string.movies_api_key);
+    //public final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + movies_key;
     // SAMPLE
     //public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
     public static final String TAG = "MainActivity";
@@ -53,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
 
     //GET API call to Movies
     private void getAPI(final MovieAdapter movieAdapter) {
+
+        // Gets the api key from secret XML and puts it in URL
+        String movies_key = getString(R.string.movies_api_key);
+        final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + movies_key;
+
         AsyncHttpClient client = new AsyncHttpClient();
 
         client.get(NOW_PLAYING_URL, new JsonHttpResponseHandler() {
