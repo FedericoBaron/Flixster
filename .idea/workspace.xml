@@ -11,11 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18480b41-afa0-4ead-a540-afef7a8d0646" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieDetailsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/models/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_movie_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout-land" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1593017781482" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1593128476012" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
@@ -72,6 +69,7 @@
       <recent name="com.example.flixster" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/libs" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout-land" />
     </key>
@@ -185,25 +183,25 @@
       <screen x="-1920" y="-428" width="1920" height="1080" />
     </state>
     <state x="-1104" y="-116" key="AndroidProcessChooserDialog/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593053968908" />
-    <state width="1878" height="302" key="GridCell.Tab.0.bottom" timestamp="1593127845196">
+    <state width="1878" height="302" key="GridCell.Tab.0.bottom" timestamp="1593128093773">
       <screen x="-1920" y="-405" width="1920" height="1057" />
     </state>
-    <state width="1878" height="302" key="GridCell.Tab.0.bottom/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593127845196" />
+    <state width="1878" height="302" key="GridCell.Tab.0.bottom/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593128093773" />
     <state width="1878" height="318" key="GridCell.Tab.0.bottom/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593101315652" />
-    <state width="1878" height="302" key="GridCell.Tab.0.center" timestamp="1593127845195">
+    <state width="1878" height="302" key="GridCell.Tab.0.center" timestamp="1593128093772">
       <screen x="-1920" y="-405" width="1920" height="1057" />
     </state>
-    <state width="1878" height="302" key="GridCell.Tab.0.center/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593127845195" />
+    <state width="1878" height="302" key="GridCell.Tab.0.center/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593128093772" />
     <state width="1878" height="318" key="GridCell.Tab.0.center/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593101315651" />
-    <state width="1878" height="302" key="GridCell.Tab.0.left" timestamp="1593127845194">
+    <state width="1878" height="302" key="GridCell.Tab.0.left" timestamp="1593128093772">
       <screen x="-1920" y="-405" width="1920" height="1057" />
     </state>
-    <state width="1878" height="302" key="GridCell.Tab.0.left/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593127845194" />
+    <state width="1878" height="302" key="GridCell.Tab.0.left/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593128093772" />
     <state width="1878" height="318" key="GridCell.Tab.0.left/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593101315650" />
-    <state width="1878" height="302" key="GridCell.Tab.0.right" timestamp="1593127845195">
+    <state width="1878" height="302" key="GridCell.Tab.0.right" timestamp="1593128093772">
       <screen x="-1920" y="-405" width="1920" height="1057" />
     </state>
-    <state width="1878" height="302" key="GridCell.Tab.0.right/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593127845195" />
+    <state width="1878" height="302" key="GridCell.Tab.0.right/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593128093772" />
     <state width="1878" height="318" key="GridCell.Tab.0.right/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593101315652" />
     <state width="1878" height="374" key="GridCell.Tab.1.bottom" timestamp="1593038557516">
       <screen x="-1920" y="-428" width="1920" height="1080" />
