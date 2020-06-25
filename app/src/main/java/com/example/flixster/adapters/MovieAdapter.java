@@ -23,6 +23,8 @@ import org.parceler.Parcels;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
     Context context;
@@ -100,8 +102,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             else
                 imageUrl = movie.getPosterPath();
 
-            // Binds image to ViewHolder
-            Glide.with(context).load(imageUrl).into(ivPoster);
+            // Binds image to ViewHolder with rounded corners
+            int radius = 18; // corner radius, higher value = more rounded
+            int margin = 0; // crop margin, set to 0 for corners with no crop
+            Glide.with(context)
+                    .load(imageUrl)
+                    .fitCenter()
+                    .transform(new RoundedCornersTransformation(radius, margin))
+                    .into(ivPoster);
         }
 
         @Override
