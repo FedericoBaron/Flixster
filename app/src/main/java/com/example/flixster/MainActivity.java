@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         RecyclerView rvMovies = findViewById(R.id.rvMovies);
         movies = new ArrayList<>();
 
@@ -46,14 +47,22 @@ public class MainActivity extends AppCompatActivity {
         // Set the Layout Manager on the Recycler View
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
 
+        getAPI(movieAdapter);
+
+    }
+
+    //GET API call to Movies
+    private void getAPI(final MovieAdapter movieAdapter) {
         AsyncHttpClient client = new AsyncHttpClient();
 
-        //GET API call
         client.get(NOW_PLAYING_URL, new JsonHttpResponseHandler() {
+            // If GET call is successful
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 Log.d(TAG, "onSuccess");
                 JSONObject jsonObject = json.jsonObject;
+
+                // Try getting the JSON results
                 try {
                     JSONArray results = jsonObject.getJSONArray("results");
                     Log.i(TAG, "Results: " + results.toString());
@@ -63,11 +72,12 @@ public class MainActivity extends AppCompatActivity {
 
                     Log.i(TAG, "Movies: " + movies.size());
 
+                // If it fails to get JSON results catch exception
                 } catch(Exception e) {
                     Log.e(TAG, "Hit JSON exception", e);
                 }
             }
-
+            // If GET call fails
             @Override
             public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
                 Log.d(TAG, "onFailure");

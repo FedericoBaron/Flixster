@@ -38,6 +38,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.d("MovieAdapter", "onCreateViewHolder");
+
+        // Use layout inflator to inflate a view
+        // Inflator turns XML content into a view
         View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);
         return new ViewHolder(movieView);
     }
@@ -76,10 +79,18 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             itemView.setOnClickListener(this);
         }
 
+        // Puts data in a particular position into the ViewHolder
         public void bind(Movie movie){
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
 
+            orientationHandler(movie);
+        }
+
+        // Chooses between landscape movie image and portrait movie image
+        // depending on orientation
+        private void orientationHandler(Movie movie)
+        {
             String imageUrl;
 
             // If phone is in landscape then imageUrl = backdrop
@@ -89,6 +100,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             else
                 imageUrl = movie.getPosterPath();
 
+            // Binds image to ViewHolder
             Glide.with(context).load(imageUrl).into(ivPoster);
         }
 
