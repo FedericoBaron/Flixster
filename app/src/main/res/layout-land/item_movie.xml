@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
 
     <ImageView
         android:id="@+id/ivPoster"
@@ -23,6 +24,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="@color/textColor"
         android:textSize="24sp"
         tools:text="The Call of the Wild" />
 
@@ -36,5 +38,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="@color/textColor"
         tools:text='A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground "fight clubs" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.' />
 </RelativeLayout>
