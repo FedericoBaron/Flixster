@@ -38,7 +38,7 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
                 // Do any work here to cue video, play video, etc.
                 Log.d(TAG, "onSuccess");
                 Log.d(TAG, "THE VIDEO ID IS " + videoKey);
-                youTubePlayer.cueVideo(videoKey);
+                youTubePlayer.loadVideo(videoKey);
             }
 
             @Override

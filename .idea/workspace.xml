@@ -11,9 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18480b41-afa0-4ead-a540-afef7a8d0646" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieDetailsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieTrailerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/flixster/MovieTrailerActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,9 +188,10 @@
       <screen x="-1920" y="-428" width="1920" height="1080" />
     </state>
     <state x="-1372" y="-126" key="AndroidCreateResourceFileDialog/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593116457685" />
-    <state x="-1105" y="-34" key="AndroidCreateXmlResourceDialog" timestamp="1593117677891">
-      <screen x="-1920" y="-428" width="1920" height="1080" />
+    <state x="-1105" y="-19" key="AndroidCreateXmlResourceDialog" timestamp="1593192774957">
+      <screen x="-1920" y="-405" width="1920" height="1057" />
     </state>
+    <state x="-1105" y="-19" key="AndroidCreateXmlResourceDialog/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593192774957" />
     <state x="-1105" y="-34" key="AndroidCreateXmlResourceDialog/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593117677891" />
     <state x="-1104" y="-100" key="AndroidProcessChooserDialog" timestamp="1593184308353">
       <screen x="-1920" y="-405" width="1920" height="1057" />
@@ -251,9 +261,10 @@
       <screen x="-1920" y="-428" width="1920" height="1080" />
     </state>
     <state x="-1295" y="41" key="run.anything.popup/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593117378058" />
-    <state x="-1319" y="-157" width="718" height="718" key="search.everywhere.popup" timestamp="1593095609461">
-      <screen x="-1920" y="-428" width="1920" height="1080" />
+    <state x="-1319" y="-140" width="718" height="703" key="search.everywhere.popup" timestamp="1593193023965">
+      <screen x="-1920" y="-405" width="1920" height="1057" />
     </state>
+    <state x="-1319" y="-140" width="718" height="703" key="search.everywhere.popup/-1920.-405.1920.1057/0.23.1792.1017@-1920.-405.1920.1057" timestamp="1593193023965" />
     <state x="-1319" y="-157" width="718" height="718" key="search.everywhere.popup/-1920.-428.1920.1080/0.0.1792.1120@-1920.-428.1920.1080" timestamp="1593095609461" />
     <state x="-1319" y="-157" width="718" height="718" key="search.everywhere.popup/-1920.-428.1920.1080/0.23.1792.1017@-1920.-428.1920.1080" timestamp="1593089686198" />
     <state x="561" y="278" width="670" height="676" key="search.everywhere.popup/0.23.1792.1017@0.23.1792.1017" timestamp="1593026194012" />
