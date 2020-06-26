@@ -88,5 +88,17 @@
         android:layout_marginEnd="0dp"
         app:srcCompat="@drawable/flicks_backdrop_placeholder" />
 
+    <TextView
+        android:id="@+id/playTrailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popularityText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="34dp"
+        android:text="@string/play_trailer"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>

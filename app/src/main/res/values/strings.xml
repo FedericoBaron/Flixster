@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Flixster</string>
     <string name="popularity_score">Popularity score:</string>
+    <string name="play_trailer">Play trailer:</string>
 </resources>
