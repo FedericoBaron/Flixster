@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.flixster.MovieDetailsActivity;
 import com.example.flixster.R;
+import com.example.flixster.databinding.ItemMovieBinding;
 import com.example.flixster.models.Movie;
 
 import org.parceler.Parcels;
@@ -42,11 +43,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.d("MovieAdapter", "onCreateViewHolder");
-
+        LayoutInflater inflater = LayoutInflater.from(context);
+        ItemMovieBinding binding = ItemMovieBinding.inflate(inflater);
         // Use layout inflator to inflate a view
         // Inflator turns XML content into a view
-        View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);
-        return new ViewHolder(movieView);
+        //View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);
+        return new ViewHolder(binding);
     }
 
     // Returns how many movies there are
@@ -73,11 +75,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         TextView tvOverview;
         ImageView ivPoster;
 
-        public ViewHolder(@NonNull View itemView){
-            super(itemView);
-            tvTitle = itemView.findViewById(R.id.tvTitle);
-            tvOverview = itemView.findViewById(R.id.tvOverview);
-            ivPoster = itemView.findViewById(R.id.ivPoster);
+
+        ItemMovieBinding binding;
+
+        public ViewHolder(ItemMovieBinding binding){
+            super(binding.getRoot());
+            tvTitle = binding.tvTitle;
+            tvOverview = binding.tvOverview;
+            ivPoster = binding.ivPoster;
 
             // Add this as the itemView's OnClickListener
             itemView.setOnClickListener(this);
@@ -129,6 +134,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             if(position != RecyclerView.NO_POSITION) {
                 // Get the movie at the position, this won't work if the class is static
                 Movie movie = movies.get(position);
+
                 // Create intent for the new activity
                 Intent intent = new Intent(context, MovieDetailsActivity.class);
 

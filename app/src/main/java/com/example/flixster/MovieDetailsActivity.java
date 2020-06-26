@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+import com.example.flixster.databinding.ActivityMainBinding;
+import com.example.flixster.databinding.ActivityMovieDetailsBinding;
 import com.example.flixster.models.Movie;
 
 import org.json.JSONArray;
@@ -44,14 +46,17 @@ public class MovieDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movie_details);
+
+        ActivityMovieDetailsBinding binding = ActivityMovieDetailsBinding.inflate(getLayoutInflater());
+
+        setContentView(binding.getRoot());
 
         // Resolve the view objects
-        tvTitle = (TextView) findViewById(R.id.tvTitle);
-        tvOverview = (TextView) findViewById(R.id.tvOverview);
-        rbVoteAverage = (RatingBar) findViewById(R.id.rbVoteAverage);
-        popScore = (TextView) findViewById(R.id.popularityScore);
-        thumbnail = (ImageView) findViewById(R.id.thumbnail);
+        tvTitle = binding.tvTitle;
+        tvOverview = binding.tvOverview;
+        rbVoteAverage = binding.rbVoteAverage;
+        popScore = binding.popularityScore;
+        thumbnail = binding.thumbnail;
 
         // Unwrap the movie passed in via intent, using its simple name as a key
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));

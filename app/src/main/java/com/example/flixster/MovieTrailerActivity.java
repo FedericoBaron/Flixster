@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.flixster.databinding.ActivityMovieTrailerBinding;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -17,19 +18,23 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movie_trailer);
 
-        callYoutubeAPI();
+        ActivityMovieTrailerBinding binding = ActivityMovieTrailerBinding.inflate(getLayoutInflater());
+
+        setContentView(binding.getRoot());
+
+        callYoutubeAPI(binding);
 
     }
 
-    private void callYoutubeAPI(){
+    private void callYoutubeAPI(ActivityMovieTrailerBinding binding){
 
         // The key for the video that needs to be played using Youtube API
         final String videoKey = getIntent().getStringExtra(MovieDetailsActivity.KEY_LINK);
 
         // Resolve the player view from the layout
-        YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
+        YouTubePlayerView playerView = binding.player;
+
 
         // Initialize with API key stored in secrets.xml
         playerView.initialize(getString(R.string.youtube_api_key), new YouTubePlayer.OnInitializedListener() {

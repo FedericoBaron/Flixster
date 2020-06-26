@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import com.example.flixster.adapters.MovieAdapter;
+import com.example.flixster.databinding.ActivityMainBinding;
 import com.example.flixster.models.Movie;
 
 import org.json.JSONArray;
@@ -29,12 +30,15 @@ public class MainActivity extends AppCompatActivity {
     // List of movie objects
     List<Movie> movies;
 
+    ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        RecyclerView rvMovies = findViewById(R.id.rvMovies);
+        RecyclerView rvMovies = binding.rvMovies;
         movies = new ArrayList<>();
 
         // Create the adapter
