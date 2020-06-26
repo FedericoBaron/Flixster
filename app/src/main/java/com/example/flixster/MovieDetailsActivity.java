@@ -34,8 +34,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
     // The movie to display
     Movie movie;
 
-    String videoId;
-
     // the view objects
     TextView tvTitle;
     TextView tvOverview;
@@ -61,10 +59,11 @@ public class MovieDetailsActivity extends AppCompatActivity {
         Log.d("MovieDetailsActivity", String.format("Showing details for '%s'", movie));
 
         wireUI();
-        String link = callMovieAPI();
+        callMovieAPI();
 
     }
 
+    // It connects the UI and the movie information
     private void wireUI()
     {
         // Set the title and overview
@@ -79,8 +78,17 @@ public class MovieDetailsActivity extends AppCompatActivity {
         float voteAverage = movie.getVoteAverage().floatValue()/2;
         rbVoteAverage.setRating(voteAverage);
 
+        // Sets the images for the movies
+        setImage();
+
+    }
+
+    // Sets image to be either landscape or portrait
+    // with a placeholder image as it loads
+    private void setImage(){
         String imageUrl = movie.getBackdropPath();
         int placeholder = placeholder = R.drawable.flicks_backdrop_placeholder;
+
         // Binds image to ViewHolder with rounded corners
         int radius = 18; // corner radius, higher value = more rounded
         int margin = 0; // crop margin, set to 0 for corners with no crop
@@ -113,12 +121,17 @@ public class MovieDetailsActivity extends AppCompatActivity {
         });
     }
 
-    private String callMovieAPI(){
+    private void callMovieAPI(){
+
+        // Gets the id of the movie the user selects
         int movieId = movie.getId();
 
         // Gets the api key from secret XML and puts it in URL
         String movies_key = getString(R.string.movies_api_key);
+
+        // Forms URL for the Movies API call to get video key
         final String URL = "https://api.themoviedb.org/3/movie/" + Integer.toString(movieId) + "/videos?api_key=" + movies_key;
+
         Log.i(TAG, "URL IS:" + URL);
 
         AsyncHttpClient client = new AsyncHttpClient();
@@ -132,14 +145,17 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
                 // Try getting the JSON results
                 try {
+
+                    // Goes to right part of JSON
                     JSONArray results = jsonObject.getJSONArray("results");
                     Log.d(TAG, "Results: " + results.get(0).toString());
                     JSONObject movie = (JSONObject) results.get(0);
-                    videoId = movie.getString("key");
-                    playVideoListener(videoId);
 
-                    // If it fails to get JSON results catch exception
-                } catch(Exception e) {
+                    // Calls the listener for when user clicks thumbnail with video key
+                    playVideoListener(movie.getString("key"));
+                }
+                // If it fails to get JSON results catch exception
+                catch(Exception e) {
                     Log.e(TAG, "Hit JSON exception", e);
                 }
             }
@@ -149,7 +165,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
                 Log.d(TAG, "onFailure");
             }
         });
-        return videoId;
     }
 
 }

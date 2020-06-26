@@ -19,9 +19,14 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_trailer);
 
-        // Temporary test video ID --TOD0 replace with movie trailer video id
-        //final String videoId = "tKodtNFpzBA";
-        final String videoId = getIntent().getStringExtra(MovieDetailsActivity.KEY_LINK);
+        callYoutubeAPI();
+
+    }
+
+    private void callYoutubeAPI(){
+
+        // The key for the video that needs to be played using Youtube API
+        final String videoKey = getIntent().getStringExtra(MovieDetailsActivity.KEY_LINK);
 
         // Resolve the player view from the layout
         YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
@@ -32,8 +37,8 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 // Do any work here to cue video, play video, etc.
                 Log.d(TAG, "onSuccess");
-                Log.d(TAG, "THE VIDEO ID IS " + videoId);
-                youTubePlayer.cueVideo(videoId);
+                Log.d(TAG, "THE VIDEO ID IS " + videoKey);
+                youTubePlayer.cueVideo(videoKey);
             }
 
             @Override
@@ -43,4 +48,5 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
             }
         });
     }
+
 }

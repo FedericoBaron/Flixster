@@ -23,11 +23,7 @@ import java.util.List;
 import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
-    // PRODUCTION
-    //String movies_key = getString(R.string.movies_api_key);
-    //public final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + movies_key;
-    // SAMPLE
-    //public static final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
+
     public static final String TAG = "MainActivity";
 
     // List of movie objects
@@ -50,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         // Set the Layout Manager on the Recycler View
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
 
+        // Calls API to get all the movies for Recycler View
         getAPI(movieAdapter);
     }
 
@@ -58,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Gets the api key from secret XML and puts it in URL
         String movies_key = getString(R.string.movies_api_key);
+
+        // URL to call Movies GET API to get all now playing movies
         final String NOW_PLAYING_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + movies_key;
 
         AsyncHttpClient client = new AsyncHttpClient();
