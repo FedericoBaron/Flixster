@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
 
         getAPI(movieAdapter);
-
     }
 
     //GET API call to Movies
